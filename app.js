@@ -5,10 +5,11 @@ var hbs = require("express-handlebars");
 var path = require("path");
 var routes = require("./routes/index");
 var cors = require("cors");
+const process = require("process");
 
 var app = express();
 var port = process.env.PORT || 8000;
-var hostname = "localhost";
+var hostname = process.env.HOST || "0.0.0.0";
 //middleware
 
 app.use(express.json());
