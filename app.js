@@ -1,6 +1,5 @@
 var express = require("express");
 var morgan = require("morgan");
-var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var hbs = require("express-handlebars");
 var path = require("path");
@@ -12,14 +11,14 @@ var port = process.env.PORT || 8000;
 var hostname = "localhost";
 //middleware
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(
   cors({
     origin: "*",
   })
 );
 //solved cors error
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(morgan("common"));
 
