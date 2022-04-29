@@ -1,0 +1,36 @@
+{
+  "name": "app-analysis",
+  "version": "1.0.0",
+  "description": "Security analysis for iot devices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "nodemon run app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arghya17/App-Analysis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arghya17/App-Analysis/issues"
+  },
+  "homepage": "https://github.com/arghya17/App-Analysis#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.3",
+    "dotenv": "^16.0.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "firebase": "^9.6.11",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "shelljs": "^0.8.5"
+  }
+}
