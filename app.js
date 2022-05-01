@@ -5,6 +5,7 @@ var hbs = require("express-handlebars");
 var path = require("path");
 var routes = require("./routes/index");
 var cors = require("cors");
+const serverless = require("serverless-http");
 const process = require("process");
 
 var app = express();
@@ -46,6 +47,9 @@ app.use("/", routes);
 app.get("/", (req, res) => {
   res.send("server is up");
 });
+app.use("/.netlify/functions/server", routes);
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+module.exports = app;
+module.exports.handler = serverless(app);

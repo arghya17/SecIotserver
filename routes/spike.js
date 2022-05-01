@@ -10,7 +10,7 @@ var spike = async (req, res) => {
     skipstring = 0;
   }
   var spk = shell.exec(
-    `${process.cwd()}/server/scripts/spike.sh`,
+    `${process.cwd()}/scripts/spike.sh`,
     (error, stdout, stderr) => {
       console.log(stdout);
       console.log(stderr);
