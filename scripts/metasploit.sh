@@ -1,7 +1,6 @@
 #!/bin/bash
 
 clear
-figlet METASPLOIT
 
 #echo -n "enter your ip address:"
 read ip
