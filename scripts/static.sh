@@ -50,15 +50,15 @@ check_valid_input
 #FindSecBugs
 if [[ $OPTION == "-1" ]]
 then	
-	sh res/dex2jar/d2j-dex2jar.sh -d $APP_LOC -f -o $PROJECT_DIR/results/result.jar
-	./res/findsecbugs-cli/findsecbugs.sh -progress -output $PROJECT_DIR/results/temp.json -sarif $PROJECT_DIR/results/result.jar
-	cat $PROJECT_DIR/results/temp.json | jq > $PROJECT_DIR/results/apktool_result.json
+	sh scripts/res/dex2jar/d2j-dex2jar.sh -d $APP_LOC -f -o $PROJECT_DIR/scripts/results/result.jar
+	./scripts/res/findsecbugs-cli/findsecbugs.sh -progress -output $PROJECT_DIR/scripts/results/temp.json -sarif $PROJECT_DIR/scripts/results/result.jar
+	cat $PROJECT_DIR/scripts/results/temp.json | jq > $PROJECT_DIR/scripts/results/apktool_result.json
 	if [ -f $APP_NAME-error.zip ]
 	then
 		rm $APP_NAME-error.zip
 	fi
-	rm $PROJECT_DIR/results/temp.json
-	rm $PROJECT_DIR/results/result.jar
+	rm $PROJECT_DIR/scripts/results/temp.json
+	rm $PROJECT_DIR/scripts/results/result.jar
 	
 #MOBSF Static
 elif [[ $OPTION == "-2" ]]
