@@ -1,0 +1,1936 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "extensions": [
+          {
+            "organization": "SpotBugs project",
+            "name": "edu.umd.cs.findbugs.plugins.core",
+            "shortDescription": {
+              "text": "Core SpotBugs plugin"
+            },
+            "version": "4.1.4",
+            "informationUri": "https://github.com/spotbugs"
+          },
+          {
+            "organization": "Find Security Bugs",
+            "name": "com.h3xstream.findsecbugs",
+            "shortDescription": {
+              "text": "Find Security Bugs"
+            },
+            "version": "",
+            "informationUri": "https://find-sec-bugs.github.io"
+          }
+        ],
+        "driver": {
+          "name": "SpotBugs",
+          "version": "4.1.4",
+          "language": "en",
+          "rules": [
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "This API ({0}) reads a file whose location might be specified by user input"
+                }
+              },
+              "id": "PATH_TRAVERSAL_IN",
+              "shortDescription": {
+                "text": "Potential Path Traversal (file read)"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#PATH_TRAVERSAL_IN",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "This web server request could be used by an attacker to expose internal services and filesystem."
+                }
+              },
+              "id": "URLCONNECTION_SSRF_FD",
+              "shortDescription": {
+                "text": "URLConnection Server-Side Request Forgery (SSRF) and File Disclosure"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#URLCONNECTION_SSRF_FD",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "This random generator ({0}) is predictable"
+                }
+              },
+              "id": "PREDICTABLE_RANDOM",
+              "shortDescription": {
+                "text": "Predictable pseudorandom number generator"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#PREDICTABLE_RANDOM",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "This use of {0} can be vulnerable to SQL injection (with Android SQL)"
+                }
+              },
+              "id": "SQL_INJECTION_ANDROID",
+              "shortDescription": {
+                "text": "Potential Android SQL Injection"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION_ANDROID",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "WebView with JavaScript enabled"
+                }
+              },
+              "id": "ANDROID_WEB_VIEW_JAVASCRIPT",
+              "shortDescription": {
+                "text": "WebView with JavaScript enabled (Android)"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#ANDROID_WEB_VIEW_JAVASCRIPT",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "This API {0} (MDX) is not a recommended cryptographic hash function"
+                }
+              },
+              "id": "WEAK_MESSAGE_DIGEST_MD5",
+              "shortDescription": {
+                "text": "MD2, MD4 and MD5 are weak hash functions"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#WEAK_MESSAGE_DIGEST_MD5",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "Files could be saved to external storage"
+                }
+              },
+              "id": "ANDROID_EXTERNAL_FILE_ACCESS",
+              "shortDescription": {
+                "text": "External file access (Android)"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#ANDROID_EXTERNAL_FILE_ACCESS",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "The regular expression \"{0}\" is vulnerable to a denial of service attack (ReDOS)"
+                }
+              },
+              "id": "REDOS",
+              "shortDescription": {
+                "text": "Regex DOS (ReDOS)"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#REDOS",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "Possible information exposure through an error message"
+                }
+              },
+              "id": "INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+              "shortDescription": {
+                "text": "Information Exposure Through An Error Message"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "The initialization vector (IV) is not properly generated"
+                }
+              },
+              "id": "STATIC_IV",
+              "shortDescription": {
+                "text": "Static IV"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#STATIC_IV",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "WebView with JavaScript interface"
+                }
+              },
+              "id": "ANDROID_WEB_VIEW_JAVASCRIPT_INTERFACE",
+              "shortDescription": {
+                "text": "WebView with JavaScript interface (Android)"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#ANDROID_WEB_VIEW_JAVASCRIPT_INTERFACE",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "WebView with activated geolocation"
+                }
+              },
+              "id": "ANDROID_GEOLOCATION",
+              "shortDescription": {
+                "text": "WebView with geolocation activated (Android)"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#ANDROID_GEOLOCATION",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "The cipher does not provide data integrity"
+                }
+              },
+              "id": "CIPHER_INTEGRITY",
+              "shortDescription": {
+                "text": "Cipher with no integrity"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "The cipher is susceptible to padding oracle attacks"
+                }
+              },
+              "id": "PADDING_ORACLE",
+              "shortDescription": {
+                "text": "Cipher is susceptible to Padding Oracle"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#PADDING_ORACLE",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "Object deserialization is used in {0}"
+                }
+              },
+              "id": "OBJECT_DESERIALIZATION",
+              "shortDescription": {
+                "text": "Object deserialization is used in {1}"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#OBJECT_DESERIALIZATION",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            },
+            {
+              "messageStrings": {
+                "default": {
+                  "text": "Broadcast intents could be received by a malicious application"
+                }
+              },
+              "id": "ANDROID_BROADCAST",
+              "shortDescription": {
+                "text": "Broadcast (Android)"
+              },
+              "helpUri": "https://find-sec-bugs.github.io/bugs.htm#ANDROID_BROADCAST",
+              "properties": {
+                "tags": [
+                  "SECURITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "exitCode": 1,
+          "executionSuccessful": false,
+          "exitSignalName": "ERROR,MISSING CLASS,BUGS FOUND"
+        }
+      ],
+      "results": [
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "e",
+                  "fullyQualifiedName": "c/h/e/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "a$d",
+                  "fullyQualifiedName": "com/bumptech/glide/l/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "a$d",
+                  "fullyQualifiedName": "com/bumptech/glide/l/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "j$a",
+                  "fullyQualifiedName": "com/bumptech/glide/load/n/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "a",
+                  "fullyQualifiedName": "com/bumptech/glide/load/n/p/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "f$a",
+                  "fullyQualifiedName": "com/bumptech/glide/load/o/b0/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "k$b",
+                  "fullyQualifiedName": "com/bumptech/glide/load/p/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "u",
+                  "fullyQualifiedName": "com/bumptech/glide/load/p/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "e$d",
+                  "fullyQualifiedName": "com/bumptech/glide/load/p/y/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "g",
+                  "fullyQualifiedName": "com/bumptech/glide/load/q/h/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PREDICTABLE_RANDOM",
+          "message": {
+            "arguments": [
+              "java.lang.Math.random()"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 3,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "MobileAdsInitProvider",
+                  "fullyQualifiedName": "com/google/android/gms/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "SQL_INJECTION_ANDROID",
+          "message": {
+            "arguments": [
+              "com/google/android/gms/internal/ads/cu2.delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 3,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "MobileAdsInitProvider",
+                  "fullyQualifiedName": "com/google/android/gms/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "SQL_INJECTION_ANDROID",
+          "message": {
+            "arguments": [
+              "com/google/android/gms/internal/ads/cu2.query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 3,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "MobileAdsInitProvider",
+                  "fullyQualifiedName": "com/google/android/gms/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "SQL_INJECTION_ANDROID",
+          "message": {
+            "arguments": [
+              "com/google/android/gms/internal/ads/cu2.update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 4,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "j",
+                  "fullyQualifiedName": "com/google/android/gms/ads/internal/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_WEB_VIEW_JAVASCRIPT",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "a",
+                  "fullyQualifiedName": "com/google/android/gms/ads/v/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PREDICTABLE_RANDOM",
+          "message": {
+            "arguments": [
+              "java.lang.Math.random()"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "b",
+                  "fullyQualifiedName": "com/google/android/gms/ads/v/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "m",
+                  "fullyQualifiedName": "com/google/android/gms/common/util/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 5,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "a51",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "WEAK_MESSAGE_DIGEST_MD5",
+          "message": {
+            "arguments": [
+              "MD5"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "bj2",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 6,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "c0",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_EXTERNAL_FILE_ACCESS",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 7,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "dk2",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "REDOS",
+          "message": {
+            "arguments": [
+              "^(-)?P(([0-9]*)Y)?(([0-9]*)M)?(([0-9]*)D)?(T(([0-9]*)H)?(([0-9]*)M)?(([0-9.]*)S)?)?$"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ds",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "du",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 4,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "dw",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_WEB_VIEW_JAVASCRIPT",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "eg",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PREDICTABLE_RANDOM",
+          "message": {
+            "arguments": [
+              "java.lang.Math.random()"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "f92",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "f92",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "f92",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "f92",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "f92",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "f92",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 5,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "fm2",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "WEAK_MESSAGE_DIGEST_MD5",
+          "message": {
+            "arguments": [
+              "MD5"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "fr2",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PREDICTABLE_RANDOM",
+          "message": {
+            "arguments": [
+              "java.util.Random"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "fv",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "go",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/RandomAccessFile.<init>(Ljava/lang/String;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ho1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ho1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 8,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "i12",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 8,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "i12",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 8,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "i12$a",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ir",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 8,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "l12",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 8,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "l12",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "mt",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "mt",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 8,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "n12",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "INFORMATION_EXPOSURE_THROUGH_AN_ERROR_MESSAGE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "no1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "no1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "no1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/io/File;Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "op",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 9,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "qz1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "STATIC_IV",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "rq1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PREDICTABLE_RANDOM",
+          "message": {
+            "arguments": [
+              "java.util.concurrent.ThreadLocalRandom"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "rq1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PREDICTABLE_RANDOM",
+          "message": {
+            "arguments": [
+              "java.util.Random"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 4,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ru",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_WEB_VIEW_JAVASCRIPT",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 10,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ru",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_WEB_VIEW_JAVASCRIPT_INTERFACE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 11,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "st",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_GEOLOCATION",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 9,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "sz1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "STATIC_IV",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "tv",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "tv",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 12,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "u42",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "CIPHER_INTEGRITY",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 13,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "u42",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PADDING_ORACLE",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "vv0",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "URLCONNECTION_SSRF_FD",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 14,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "vz0",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "OBJECT_DESERIALIZATION",
+          "message": {
+            "arguments": [
+              "com.google.android.gms.internal.ads.vz0.a(String)"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "wn1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 9,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "yz1",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "STATIC_IV",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 6,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "zn2",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_EXTERNAL_FILE_ACCESS",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 5,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "zo",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "WEAK_MESSAGE_DIGEST_MD5",
+          "message": {
+            "arguments": [
+              "MD5"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 5,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "zo",
+                  "fullyQualifiedName": "com/google/android/gms/internal/ads/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "WEAK_MESSAGE_DIGEST_MD5",
+          "message": {
+            "arguments": [
+              "MD5"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 15,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "FakeChatGroupNew",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_BROADCAST",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 6,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "FakeChatGroupNew",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_EXTERNAL_FILE_ACCESS",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "FakeChatGroupNew",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 15,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "FakeChatNew",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_BROADCAST",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 6,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "FakeChatNew",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_EXTERNAL_FILE_ACCESS",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "FakeChatNew",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 3,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "MainActivity",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "SQL_INJECTION_ANDROID",
+          "message": {
+            "arguments": [
+              "android/database/sqlite/SQLiteDatabase.execSQL(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 0,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ScreenShot",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PATH_TRAVERSAL_IN",
+          "message": {
+            "arguments": [
+              "java/io/File.<init>(Ljava/lang/String;)V"
+            ],
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 6,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "ScreenShot$a",
+                  "fullyQualifiedName": "com/techroid/fakechat/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "ANDROID_EXTERNAL_FILE_ACCESS",
+          "message": {
+            "id": "default"
+          }
+        },
+        {
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "kind": "type",
+                  "name": "i0",
+                  "fullyQualifiedName": "d/a/b/a/c/c/<Unknown>"
+                }
+              ]
+            }
+          ],
+          "ruleId": "PREDICTABLE_RANDOM",
+          "message": {
+            "arguments": [
+              "java.util.Random"
+            ],
+            "id": "default"
+          }
+        }
+      ],
+      "originalUriBaseIds": {}
+    }
+  ]
+}
