@@ -64,13 +64,14 @@ then
 elif [[ $OPTION == "-2" ]]
 then
 	fuser -k 8000/tcp
-	cd res/MobSF-master/
+	cd scripts/res/MobSF-master/
+	./setup.sh
 	./run.sh &
 	pid=$!
 
 	sleep 1
 
-	python3 scripts/mass_static_analysis.py -s 0.0.0.0:8000 -k $API_KEY -d $APP_DIR
+	python3 /scripts/mass_static_analysis.py -s 0.0.0.0:8000 -k $API_KEY -d $APP_DIR
 	HASH=`curl -F "file=@/$APP_LOC" $API_URL/upload -H "Authorization:$API_KEY" | jq -r  ".hash"`
 	curl -X POST --url $API_URL/report_json --data "hash=$HASH" -H "Authorization:$API_KEY" | jq > $PROJECT_DIR/results/mobsf_results.json
 	sleep 1
