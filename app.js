@@ -1,16 +1,16 @@
-var express = require("express");
-var morgan = require("morgan");
-var cookieParser = require("cookie-parser");
-var hbs = require("express-handlebars");
-var path = require("path");
-var routes = require("./routes/index");
-var cors = require("cors");
+const express = require("express");
+const morgan = require("morgan");
+const cookieParser = require("cookie-parser");
+const hbs = require("express-handlebars");
+const path = require("path");
+const routes = require("./routes/index");
+const cors = require("cors");
 const serverless = require("serverless-http");
 const process = require("process");
 
-var app = express();
-var port = process.env.PORT || 8000;
-var hostname = process.env.HOST || "0.0.0.0";
+let app = express();
+const port = process.env.PORT || 8001;
+const hostname = process.env.HOST || "0.0.0.0";
 //middleware
 
 app.use(express.json());

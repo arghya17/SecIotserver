@@ -2,6 +2,6 @@
 PROJECT_DIR=`pwd`
 
 chmod -R 777 ./
-pip3 install -r requirements.txt
-cd res/MobSF-master
+pip3 install -r scripts/res/MobSF-master/requirements.txt
+cd scripts/res/MobSF-master
 ./setup.sh

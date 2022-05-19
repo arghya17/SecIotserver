@@ -50,27 +50,28 @@ check_valid_input
 #FindSecBugs
 if [[ $OPTION == "-1" ]]
 then	
-	sh res/dex2jar/d2j-dex2jar.sh -d $APP_LOC -f -o $PROJECT_DIR/results/result.jar
-	./res/findsecbugs-cli/findsecbugs.sh -progress -output $PROJECT_DIR/results/temp.json -sarif $PROJECT_DIR/results/result.jar
-	cat $PROJECT_DIR/results/temp.json | jq > $PROJECT_DIR/results/apktool_result.json
+	sh scripts/res/dex2jar/d2j-dex2jar.sh -d $APP_LOC -f -o $PROJECT_DIR/scripts/results/result.jar
+	./scripts/res/findsecbugs-cli/findsecbugs.sh -progress -output $PROJECT_DIR/scripts/results/temp.json -sarif $PROJECT_DIR/scripts/results/result.jar
+	cat $PROJECT_DIR/scripts/results/temp.json | jq > $PROJECT_DIR/scripts/results/apktool_result.json
 	if [ -f $APP_NAME-error.zip ]
 	then
 		rm $APP_NAME-error.zip
 	fi
-	rm $PROJECT_DIR/results/temp.json
-	rm $PROJECT_DIR/results/result.jar
+	rm $PROJECT_DIR/scripts/results/temp.json
+	rm $PROJECT_DIR/scripts/results/result.jar
 	
 #MOBSF Static
 elif [[ $OPTION == "-2" ]]
 then
 	fuser -k 8000/tcp
-	cd res/MobSF-master/
+	cd scripts/res/MobSF-master/
+	./setup.sh
 	./run.sh &
 	pid=$!
 
 	sleep 1
 
-	python3 scripts/mass_static_analysis.py -s 0.0.0.0:8000 -k $API_KEY -d $APP_DIR
+	python3 /scripts/mass_static_analysis.py -s 0.0.0.0:8000 -k $API_KEY -d $APP_DIR
 	HASH=`curl -F "file=@/$APP_LOC" $API_URL/upload -H "Authorization:$API_KEY" | jq -r  ".hash"`
 	curl -X POST --url $API_URL/report_json --data "hash=$HASH" -H "Authorization:$API_KEY" | jq > $PROJECT_DIR/results/mobsf_results.json
 	sleep 1
