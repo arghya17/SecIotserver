@@ -7,11 +7,13 @@ A integrated web application for doing security analysis on IOT devices
 - Angular for frontend
 - Nodejs for backend
 - Firestore as database
+- docker was used to create an isolated environment to run the server
   ## Installation and Setup:
 - clone the project from the repository
 - To run the backend server
   > goto the project directory
-  > `Run npm install`
+  > docker build -t seciot:latest .
+  > docker run --pulish 8001:8001 seciot:latest
 
 ### Note:
 

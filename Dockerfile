@@ -9,7 +9,7 @@ RUN apt update && apt -y install metasploit-framework
 RUN apt install -y nmap 
 RUN apt install -y openvas 
 RUN apt install -y spike 
-RUN apt install -y jq
+RUN apt install -y jq default-jre python3-venv python3-pip
 RUN npm install
 ENV NODE_ENV production
 # Add your source files
