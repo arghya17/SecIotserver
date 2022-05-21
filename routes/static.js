@@ -10,7 +10,7 @@ let apktool = async (req, res) => {
       req.file.filename
     }`,
     (error, stdout, stderr) => {
-      console.log(stdout);
+      //console.log(stdout);
       console.log(stderr);
       if (error !== 0) {
         res.status(400);
@@ -32,7 +32,7 @@ let mobsf = async (req, res) => {
       req.file.filename
     }`,
     (error, stdout, stderr) => {
-      console.log(stdout);
+      //console.log(stdout);
       console.log(stderr);
       if (error !== 0) {
         res.status(400);
