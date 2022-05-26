@@ -3,9 +3,10 @@ const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const hbs = require("express-handlebars");
 const path = require("path");
-const routes = require("./routes/index");
+var routes = require("./routes/index");
 const cors = require("cors");
 const serverless = require("serverless-http");
+var shelljs = require("shelljs");
 const process = require("process");
 
 let app = express();
