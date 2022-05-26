@@ -17,4 +17,5 @@ A integrated web application for doing security analysis on IOT devices
 
 ### Note:
 
-Please add a .env file to the same directory as .env.example replicating the template of the .env.example file before executing the server side application. You are free to change the string content of the .env.example file but remember to keep the variable name same
+- For docker build look in arghya17/seciot
+- Please add a .env file to the same directory as .env.example replicating the template of the .env.example file before executing the server side application. You are free to change the string content of the .env.example file but remember to keep the variable name same
