@@ -17,18 +17,19 @@ var metasploit = async (req, res) => {
         res.status(400);
         return res.json({ status: "error", error: stderr });
       } else {
-        const filePath = `${process.cwd()}/scripts/${payload}.exe`; // or any file format
+        const filePath = `${process.cwd()}/${payload}.exe`; // or any file format
 
         // Check if file specified by the filePath exists
-        fs.existsSync(filePath, (exists) => {
+        fs.exists(filePath, (exists) => {
           if (exists) {
             // Content-type is very interesting part that guarantee that
             // Web browser will handle response in an appropriate manner.
             res.writeHead(200, {
               "Content-Type": "application/octet-stream",
-              "Content-Disposition": "attachment; filename=" + fileName,
+              "Content-Disposition": "attachment; filename=" + payload,
             });
             fs.createReadStream(filePath).pipe(res);
+
             return;
           }
           res.writeHead(400, { "Content-Type": "text/plain" });
@@ -40,12 +41,11 @@ var metasploit = async (req, res) => {
   meta.stdin.write(`${ip} \n`);
   meta.stdin.write(`${port} \n`);
   meta.stdin.write(`${payload} \n`);
-
-  try {
-    shell.rm(`${payload}.exe`);
-  } catch (err) {
-    console.error(err);
-  }
+  // try {
+  //   shell.rm(`${payload}.exe`);
+  // } catch (err) {
+  //   console.error(err);
+  // }
 };
 
 module.exports = metasploit;
