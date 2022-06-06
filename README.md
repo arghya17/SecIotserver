@@ -13,7 +13,7 @@ A integrated web application for doing security analysis on IOT devices
 - To run the backend server
   > goto the project directory \
   > docker build -t seciot:latest . \
-  > docker run --pulish 8001:8001 seciot:latest
+  > docker run --publish 8001:8001 seciot:latest
 
 ### Note:
 
