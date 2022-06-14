@@ -8,7 +8,7 @@ then
 	APP_NAME=`basename $APP_LOC`
 fi
 PROJECT_DIR=`pwd`
-API_KEY=85fc3a3a92f71f59a6197a2908a96ace6e1d55617aefa4c30fb1e04fc478810c
+API_KEY=46fa35f33b1b340eccfd2947f059ea57c91e35fe65481ef40929aae2fdffefc1
 API_URL=http://0.0.0.0:8000/api/v1
 
 usage(){
