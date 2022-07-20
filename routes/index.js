@@ -7,6 +7,7 @@ const nmap = require("./nmap");
 const metasploit = require("./metasploit");
 const spike = require("./spike");
 const { apktool, mobsf } = require("./static");
+const setup = require("./setup");
 const multer = require("multer");
 const fs = require("fs");
 const process = require("process");
@@ -32,4 +33,5 @@ router.post("/user/mobsf", checkAuth, upload.single("apk"), mobsf, () => {
     force: true,
   });
 });
+router.get("/user/setup", checkAuth, setup);
 module.exports = router;

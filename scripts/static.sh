@@ -8,8 +8,9 @@ then
 	APP_NAME=`basename $APP_LOC`
 fi
 PROJECT_DIR=`pwd`
-API_KEY=85fc3a3a92f71f59a6197a2908a96ace6e1d55617aefa4c30fb1e04fc478810c
+API_KEY=e161c81636f405ac77da38c134fdf9ad89aff7ddebb3ddffe7b846d7c0f539b3
 API_URL=http://0.0.0.0:8000/api/v1
+
 
 usage(){
 	echo "USAGE: ./static.sh [option] [file path including file name]"
@@ -71,8 +72,9 @@ then
 	sleep 1
 
 	python3 scripts/mass_static_analysis.py -s 0.0.0.0:8000 -k $API_KEY -d $APP_DIR
-	HASH=`curl -F "file=@/$APP_LOC" $API_URL/upload -H "Authorization:$API_KEY" | jq -r  ".hash"`
-	curl -X POST --url $API_URL/report_json --data "hash=$HASH" -H "Authorization:$API_KEY" | jq > $PROJECT_DIR/results/mobsf_results.json
+	HASH=`curl -F 'file=@/$APP_LOC' $API_URL/upload -H "Authorization:$API_KEY" | jq -r  ".hash"`
+	echo $APP_LOC
+	curl -X POST --url $API_URL/report_json --data "hash=$HASH" -H "Authorization:$API_KEY" | jq > $PROJECT_DIR/scripts/results/mobsf_results.json
 	sleep 1
 	kill $pid
 fi
