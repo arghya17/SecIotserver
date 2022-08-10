@@ -13,6 +13,7 @@ const fs = require("fs");
 const process = require("process");
 const path = require("path");
 const metasploit1 = require("./metasploit1");
+const openvas = require("./openvas");
 const upload = multer({ dest: "uploads/" });
 
 router.post("/register", userRegistration);
@@ -36,4 +37,5 @@ router.post("/user/mobsf", checkAuth, upload.single("apk"), mobsf, () => {
 });
 router.get("/user/setup", checkAuth, setup);
 router.get("/user/metasploit1", checkAuth, metasploit1);
+router.get("/user/openvas", checkAuth, openvas);
 module.exports = router;
